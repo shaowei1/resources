@@ -1,0 +1,459 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ群170701297</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                21讲为什么我只改一行的语句，锁这么多
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/be/04/bef7889aea4e542f24747e0aba819e04.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>在上一篇文章中，我和你介绍了间隙锁和next-key lock的概念，但是并没有说明加锁规则。间隙锁的概念理解起来确实有点儿难，尤其在配合上行锁以后，很容易在判断是否会出现锁等待的问题上犯错。</p><p>所以今天，我们就先从这个加锁规则开始吧。</p><p>首先说明一下，这些加锁规则我没在别的地方看到过有类似的总结，以前我自己判断的时候都是想着代码里面的实现来脑补的。这次为了总结成不看代码的同学也能理解的规则，是我又重新刷了代码临时总结出来的。所以，<strong>这个规则有以下两条前提说明：</strong></p><ol>
+<li>
+<p>MySQL后面的版本可能会改变加锁策略，所以这个规则只限于截止到现在的最新版本，即5.x系列&lt;=5.7.24，8.0系列 &lt;=8.0.13。</p>
+</li>
+<li>
+<p>如果大家在验证中有发现bad case的话，请提出来，我会再补充进这篇文章，使得一起学习本专栏的所有同学都能受益。</p>
+</li>
+</ol><p>因为间隙锁在可重复读隔离级别下才有效，所以本篇文章接下来的描述，若没有特殊说明，默认是可重复读隔离级别。</p><p><strong>我总结的加锁规则里面，包含了两个“原则”、两个“优化”和一个“bug”。</strong></p><ol>
+<li>
+<p>原则1：加锁的基本单位是next-key lock。希望你还记得，next-key lock是前开后闭区间。</p>
+</li>
+<li>
+<p>原则2：查找过程中访问到的对象才会加锁。</p>
+</li>
+<li>
+<p>优化1：索引上的等值查询，给唯一索引加锁的时候，next-key lock退化为行锁。</p>
+</li>
+<li>
+<p>优化2：索引上的等值查询，向右遍历时且最后一个值不满足等值条件的时候，next-key lock退化为间隙锁。</p>
+</li>
+<li>
+<p>一个bug：唯一索引上的范围查询会访问到不满足条件的第一个值为止。</p>
+</li>
+</ol><!-- [[[read_end]]] --><p>我还是以上篇文章的表t为例，和你解释一下这些规则。表t的建表语句和初始化语句如下。</p><pre><code>CREATE TABLE `t` (
+  `id` int(11) NOT NULL,
+  `c` int(11) DEFAULT NULL,
+  `d` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `c` (`c`)
+) ENGINE=InnoDB;
+
+insert into t values(0,0,0),(5,5,5),
+(10,10,10),(15,15,15),(20,20,20),(25,25,25);
+</code></pre><p>接下来的例子基本都是配合着图片说明的，所以我建议你可以对照着文稿看，有些例子可能会“毁三观”，也建议你读完文章后亲手实践一下。</p><h1>案例一：等值查询间隙锁</h1><p>第一个例子是关于等值条件操作间隙：</p><p><img src="https://static001.geekbang.org/resource/image/58/6c/585dfa8d0dd71171a6fa16bed4ba816c.png" alt=""></p><center><span class="reference">图1 等值查询的间隙锁</span></center><p>由于表t中没有id=7的记录，所以用我们上面提到的加锁规则判断一下的话：</p><ol>
+<li>
+<p>根据原则1，加锁单位是next-key lock，session A加锁范围就是(5,10]；</p>
+</li>
+<li>
+<p>同时根据优化2，这是一个等值查询(id=7)，而id=10不满足查询条件，next-key lock退化成间隙锁，因此最终加锁的范围是(5,10)。</p>
+</li>
+</ol><p>所以，session B要往这个间隙里面插入id=8的记录会被锁住，但是session C修改id=10这行是可以的。</p><h1>案例二：非唯一索引等值锁</h1><p>第二个例子是关于覆盖索引上的锁：</p><p><img src="https://static001.geekbang.org/resource/image/46/65/465990fe8f6b418ca3f9992bd1bb5465.png" alt=""></p><center><span class="reference">图2 只加在非唯一索引上的锁</span></center><p>看到这个例子，你是不是有一种“该锁的不锁，不该锁的乱锁”的感觉？我们来分析一下吧。</p><p>这里session A要给索引c上c=5的这一行加上读锁。</p><ol>
+<li>
+<p>根据原则1，加锁单位是next-key lock，因此会给(0,5]加上next-key lock。</p>
+</li>
+<li>
+<p>要注意c是普通索引，因此仅访问c=5这一条记录是不能马上停下来的，需要向右遍历，查到c=10才放弃。根据原则2，访问到的都要加锁，因此要给(5,10]加next-key lock。</p>
+</li>
+<li>
+<p>但是同时这个符合优化2：等值判断，向右遍历，最后一个值不满足c=5这个等值条件，因此退化成间隙锁(5,10)。</p>
+</li>
+<li>
+<p>根据原则2 ，<strong>只有访问到的对象才会加锁</strong>，这个查询使用覆盖索引，并不需要访问主键索引，所以主键索引上没有加任何锁，这就是为什么session B的update语句可以执行完成。</p>
+</li>
+</ol><p>但session C要插入一个(7,7,7)的记录，就会被session A的间隙锁(5,10)锁住。</p><p>需要注意，在这个例子中，lock in share mode只锁覆盖索引，但是如果是for update就不一样了。 执行 for update时，系统会认为你接下来要更新数据，因此会顺便给主键索引上满足条件的行加上行锁。</p><p>这个例子说明，锁是加在索引上的；同时，它给我们的指导是，如果你要用lock in share mode来给行加读锁避免数据被更新的话，就必须得绕过覆盖索引的优化，在查询字段中加入索引中不存在的字段。比如，将session A的查询语句改成select d from t where c=5 lock in share mode。你可以自己验证一下效果。</p><h1>案例三：主键索引范围锁</h1><p>第三个例子是关于范围查询的。</p><p>举例之前，你可以先思考一下这个问题：对于我们这个表t，下面这两条查询语句，加锁范围相同吗？</p><pre><code>mysql&gt; select * from t where id=10 for update;
+mysql&gt; select * from t where id&gt;=10 and id&lt;11 for update;
+</code></pre><p>你可能会想，id定义为int类型，这两个语句就是等价的吧？其实，它们并不完全等价。</p><p>在逻辑上，这两条查语句肯定是等价的，但是它们的加锁规则不太一样。现在，我们就让session A执行第二个查询语句，来看看加锁效果。</p><p><img src="https://static001.geekbang.org/resource/image/30/80/30b839bf941f109b04f1a36c302aea80.png" alt=""></p><center><span class="reference">图3 主键索引上范围查询的锁</span></center><p>现在我们就用前面提到的加锁规则，来分析一下session A 会加什么锁呢？</p><ol>
+<li>
+<p>开始执行的时候，要找到第一个id=10的行，因此本该是next-key lock(5,10]。 根据优化1， 主键id上的等值条件，退化成行锁，只加了id=10这一行的行锁。</p>
+</li>
+<li>
+<p>范围查找就往后继续找，找到id=15这一行停下来，因此需要加next-key lock(10,15]。</p>
+</li>
+</ol><p>所以，session A这时候锁的范围就是主键索引上，行锁id=10和next-key lock(10,15]。这样，session B和session C的结果你就能理解了。</p><p>这里你需要注意一点，首次session A定位查找id=10的行的时候，是当做等值查询来判断的，而向右扫描到id=15的时候，用的是范围查询判断。</p><h1>案例四：非唯一索引范围锁</h1><p>接下来，我们再看两个范围查询加锁的例子，你可以对照着案例三来看。</p><p>需要注意的是，与案例三不同的是，案例四中查询语句的where部分用的是字段c。</p><p><img src="https://static001.geekbang.org/resource/image/73/7a/7381475e9e951628c9fc907f5a57697a.png" alt=""></p><center><span class="reference">图4 非唯一索引范围锁</span></center><p>这次session A用字段c来判断，加锁规则跟案例三唯一的不同是：在第一次用c=10定位记录的时候，索引c上加了(5,10]这个next-key lock后，由于索引c是非唯一索引，没有优化规则，也就是说不会蜕变为行锁，因此最终sesion A加的锁是，索引c上的(5,10] 和(10,15] 这两个next-key lock。</p><p>所以从结果上来看，sesson B要插入（8,8,8)的这个insert语句时就被堵住了。</p><p>这里需要扫描到c=15才停止扫描，是合理的，因为InnoDB要扫到c=15，才知道不需要继续往后找了。</p><h1>案例五：唯一索引范围锁bug</h1><p>前面的四个案例，我们已经用到了加锁规则中的两个原则和两个优化，接下来再看一个关于加锁规则中bug的案例。</p><p><img src="https://static001.geekbang.org/resource/image/b1/6d/b105f8c4633e8d3a84e6422b1b1a316d.png" alt=""></p><center><span class="reference">图5 唯一索引范围锁的bug</span></center><p>session A是一个范围查询，按照原则1的话，应该是索引id上只加(10,15]这个next-key lock，并且因为id是唯一键，所以循环判断到id=15这一行就应该停止了。</p><p>但是实现上，InnoDB会往前扫描到第一个不满足条件的行为止，也就是id=20。而且由于这是个范围扫描，因此索引id上的(15,20]这个next-key lock也会被锁上。</p><p>所以你看到了，session B要更新id=20这一行，是会被锁住的。同样地，session C要插入id=16的一行，也会被锁住。</p><p>照理说，这里锁住id=20这一行的行为，其实是没有必要的。因为扫描到id=15，就可以确定不用往后再找了。但实现上还是这么做了，因此我认为这是个bug。</p><p>我也曾找社区的专家讨论过，官方bug系统上也有提到，但是并未被verified。所以，认为这是bug这个事儿，也只能算我的一家之言，如果你有其他见解的话，也欢迎你提出来。</p><h1>案例六：非唯一索引上存在"等值"的例子</h1><p>接下来的例子，是为了更好地说明“间隙”这个概念。这里，我给表t插入一条新记录。</p><pre><code>mysql&gt; insert into t values(30,10,30);
+</code></pre><p>新插入的这一行c=10，也就是说现在表里有两个c=10的行。那么，这时候索引c上的间隙是什么状态了呢？你要知道，由于非唯一索引上包含主键的值，所以是不可能存在“相同”的两行的。</p><p><img src="https://static001.geekbang.org/resource/image/c1/59/c1fda36c1502606eb5be3908011ba159.png" alt=""></p><center><span class="reference">图6 非唯一索引等值的例子</span></center><p>可以看到，虽然有两个c=10，但是它们的主键值id是不同的（分别是10和30），因此这两个c=10的记录之间，也是有间隙的。</p><p>图中我画出了索引c上的主键id。为了跟间隙锁的开区间形式进行区别，我用(c=10,id=30)这样的形式，来表示索引上的一行。</p><p>现在，我们来看一下案例六。</p><p>这次我们用delete语句来验证。注意，delete语句加锁的逻辑，其实跟select ... for update 是类似的，也就是我在文章开始总结的两个“原则”、两个“优化”和一个“bug”。</p><p><img src="https://static001.geekbang.org/resource/image/b5/78/b55fb0a1cac3500b60e1cf9779d2da78.png" alt=""></p><center><span class="reference">图7 delete 示例</span></center><p>这时，session A在遍历的时候，先访问第一个c=10的记录。同样地，根据原则1，这里加的是(c=5,id=5)到(c=10,id=10)这个next-key lock。</p><p>然后，session A向右查找，直到碰到(c=15,id=15)这一行，循环才结束。根据优化2，这是一个等值查询，向右查找到了不满足条件的行，所以会退化成(c=10,id=10) 到 (c=15,id=15)的间隙锁。</p><p>也就是说，这个delete语句在索引c上的加锁范围，就是下图中蓝色区域覆盖的部分。<br>
+<img src="https://static001.geekbang.org/resource/image/bb/24/bb0ad92483d71f0dcaeeef278f89cb24.png" alt=""></p><center><span class="reference">图8 delete加锁效果示例</span></center><p>这个蓝色区域左右两边都是虚线，表示开区间，即(c=5,id=5)和(c=15,id=15)这两行上都没有锁。</p><h1>案例七：limit 语句加锁</h1><p>例子6也有一个对照案例，场景如下所示：</p><p><img src="https://static001.geekbang.org/resource/image/af/2e/afc3a08ae7a254b3251e41b2a6dae02e.png" alt=""></p><center><span class="reference">图9 limit 语句加锁</span></center><p>这个例子里，session A的delete语句加了 limit 2。你知道表t里c=10的记录其实只有两条，因此加不加limit 2，删除的效果都是一样的，但是加锁的效果却不同。可以看到，session B的insert语句执行通过了，跟案例六的结果不同。</p><p>这是因为，案例七里的delete语句明确加了limit 2的限制，因此在遍历到(c=10, id=30)这一行之后，满足条件的语句已经有两条，循环就结束了。</p><p>因此，索引c上的加锁范围就变成了从（c=5,id=5)到（c=10,id=30)这个前开后闭区间，如下图所示：<br>
+<img src="https://static001.geekbang.org/resource/image/e5/d5/e5408ed94b3d44985073255db63bd0d5.png" alt=""></p><center><span class="reference">图10 带limit 2的加锁效果</span></center><p>可以看到，(c=10,id=30）之后的这个间隙并没有在加锁范围里，因此insert语句插入c=12是可以执行成功的。</p><p>这个例子对我们实践的指导意义就是，<strong>在删除数据的时候尽量加limit</strong>。这样不仅可以控制删除数据的条数，让操作更安全，还可以减小加锁的范围。</p><h1>案例八：一个死锁的例子</h1><p>前面的例子中，我们在分析的时候，是按照next-key lock的逻辑来分析的，因为这样分析比较方便。最后我们再看一个案例，目的是说明：next-key lock实际上是间隙锁和行锁加起来的结果。</p><p>你一定会疑惑，这个概念不是一开始就说了吗？不要着急，我们先来看下面这个例子：</p><p><img src="https://static001.geekbang.org/resource/image/7b/06/7b911a4c995706e8aa2dd96ff0f36506.png" alt=""></p><center><span class="reference">图11 案例八的操作序列</span></center><p>现在，我们按时间顺序来分析一下为什么是这样的结果。</p><ol>
+<li>
+<p>session A 启动事务后执行查询语句加lock in share mode，在索引c上加了next-key lock(5,10] 和间隙锁(10,15)；</p>
+</li>
+<li>
+<p>session B 的update语句也要在索引c上加next-key lock(5,10] ，进入锁等待；</p>
+</li>
+<li>
+<p>然后session A要再插入(8,8,8)这一行，被session B的间隙锁锁住。由于出现了死锁，InnoDB让session B回滚。</p>
+</li>
+</ol><p>你可能会问，session B的next-key lock不是还没申请成功吗？</p><p>其实是这样的，session B的“加next-key lock(5,10] ”操作，实际上分成了两步，先是加(5,10)的间隙锁，加锁成功；然后加c=10的行锁，这时候才被锁住的。</p><p>也就是说，我们在分析加锁规则的时候可以用next-key lock来分析。但是要知道，具体执行的时候，是要分成间隙锁和行锁两段来执行的。</p><h1>小结</h1><p>这里我再次说明一下，我们上面的所有案例都是在可重复读隔离级别(repeatable-read)下验证的。同时，可重复读隔离级别遵守两阶段锁协议，所有加锁的资源，都是在事务提交或者回滚的时候才释放的。</p><p>在最后的案例中，你可以清楚地知道next-key lock实际上是由间隙锁加行锁实现的。如果切换到读提交隔离级别(read-committed)的话，就好理解了，过程中去掉间隙锁的部分，也就是只剩下行锁的部分。</p><p>其实读提交隔离级别在外键场景下还是有间隙锁，相对比较复杂，我们今天先不展开。</p><p>另外，在读提交隔离级别下还有一个优化，即：语句执行过程中加上的行锁，在语句执行完成后，就要把“不满足条件的行”上的行锁直接释放了，不需要等到事务提交。</p><p>也就是说，读提交隔离级别下，锁的范围更小，锁的时间更短，这也是不少业务都默认使用读提交隔离级别的原因。</p><p>不过，我希望你学过今天的课程以后，可以对next-key lock的概念有更清晰的认识，并且会用加锁规则去判断语句的加锁范围。</p><p>在业务需要使用可重复读隔离级别的时候，能够更细致地设计操作数据库的语句，解决幻读问题的同时，最大限度地提升系统并行处理事务的能力。</p><p>经过这篇文章的介绍，你再看一下上一篇文章最后的思考题，再来尝试分析一次。</p><p>我把题目重新描述和简化一下：还是我们在文章开头初始化的表t，里面有6条记录，图12的语句序列中，为什么session B的insert操作，会被锁住呢？</p><p><img src="https://static001.geekbang.org/resource/image/1f/77/1f6045f1b67f8e4131f812aab173f577.png" alt=""></p><center><span class="reference">图12 锁分析思考题</span></center><p>另外，如果你有兴趣多做一些实验的话，可以设计好语句序列，在执行之前先自己分析一下，然后实际地验证结果是否跟你的分析一致。</p><p>对于那些你自己无法解释的结果，可以发到评论区里，后面我争取挑一些有趣的案例在文章中分析。</p><p>你可以把你关于思考题的分析写在留言区，也可以分享你自己设计的锁验证方案，我会在下一篇文章的末尾选取有趣的评论跟大家分享。感谢你的收听，也欢迎你把这篇文章分享给更多的朋友一起阅读。</p><h2>上期问题时间</h2><p>上期的问题，我在本期继续作为了课后思考题，所以会在下篇文章再一起公布“答案”。</p><p>这里，我展开回答一下评论区几位同学的问题。</p><ul>
+<li>@令狐少侠 说，以前一直认为间隙锁只在二级索引上有。现在你知道了，有间隙的地方就可能有间隙锁。</li>
+<li>@浪里白条 同学问，如果是varchar类型，加锁规则是什么样的。<br>
+回答：实际上在判断间隙的时候，varchar和int是一样的，排好序以后，相邻两个值之间就有间隙。</li>
+<li>有几位同学提到说，上一篇文章自己验证的结果跟案例一不同，就是在session A执行完这两个语句：</li>
+</ul><pre><code>begin;
+select * from t where d=5 for update; /*Q1*/
+</code></pre><p>以后，session B 的update 和session C的insert 都会被堵住。这是不是跟文章的结论矛盾？</p><p>其实不是的，这个例子用的是反证假设，就是假设不堵住，会出现问题；然后，推导出session A需要锁整个表所有的行和所有间隙。</p><p>评论区留言点赞板：</p><blockquote>
+<p>@ 某、人 、@郭江伟 两位同学尝试分析了上期问题，并给了有启发性的解答。</p>
+</blockquote><p><img src="https://static001.geekbang.org/resource/image/09/77/09c1073f99cf71d2fb162a716b5fa577.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/f8/ba/14e05601.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">约书亚</span>
+                            </div>
+                            <div class="bd">早晨睡不着打开极客时间一看，竟然更新了。今天是周日而且在假期中哎... <br></div>
+                            <span class="time">2018-12-31 06:32</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">风雨无阻 节假日不休，包括元旦和春节😄</p>
+                                <p class="reply-time">2018-12-31 08:48</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/0c/ca/6173350b.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">郭江伟</span>
+                            </div>
+                            <div class="bd">老师这次的留下的问题，语句跟上次不一样，上期问题语句是select id  from t where c&gt;=15 and c&lt;=20 order by c desc  for update;；这次缺少了 order by c desc ，不加desc的话insert into t values(6,6,6);不会被堵塞；<br>根据优化3：索引上的等值查询，在向右遍历时且最后一个值不满足等值条件的时候next-key lock退化为间隙锁；<br>问题中的sql语句加了desc ，是向左扫描，该优化用不上，所以下限10是闭区间，为了防止c为10的行加入，需要锁定到索引c键（5,5）<br>此例中insert into t values(6,5,6) 会堵塞，insert into t values(4,5,6) 不会堵塞， <br></div>
+                            <span class="time">2018-12-31 14:11</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">嗯你说的对<br><br>不过是我少打一个词了，加上去了，要desc哦<br><br>重新分析下😄</p>
+                                <p class="reply-time">2018-12-31 16:14</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/52/3c/0c71ad7e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">张三</span>
+                            </div>
+                            <div class="bd">Happy New Year !这个专栏绝对是极客时间最好我买过最值的专栏。 <br></div>
+                            <span class="time">2018-12-31 15:53</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/e5/39/951f89c8.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">信信</span>
+                            </div>
+                            <div class="bd">评论不支持追加。。。刚老师回答我的第3个问题：“锁住了索引c上所有next key lock ”，是不是口误了，锁住的是主键索引吧？因为session B执行：select id from t where c = 0 lock in share mode;是不会被阻塞的。 <br></div>
+                            <span class="time">2019-01-01 15:33</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/80/d6/1f78bc57.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">萧若愚</span>
+                            </div>
+                            <div class="bd">请教一个问题，在测试数据库上做 like 模糊查询时出现了些错误的结果，不知道原因是什么。<br>针对记录 r3 = &#39;包含&#47;查询&#39;<br>（1）select * from t where r like &#39;%&#47;&#47;%&#39; escape &#39;&#47;&#39;;  未查到 b3<br>（2）select * from t where r like &#39;%包含&#47;&#47;%&#39; escape &#39;&#47;&#39;; 可以查到 b3<br>（3）select * from t where r like &#39;%&#47;&#47;查询&#39; escape &#39;&#47;&#39;; 也未查询到 b3<br>（4）select * from t where r like &#39;%&#47;&#47;&#47;%&#39; escape &#39;&#47;&#39;; 查询可以查到 b3<br>但是在本地数据库查查询可以得到正确的结果。两个数据库都是用的 innodb 引擎，字符集都是utf8mb4。使用默认的反斜杠转义字符时，有关反斜杠的多个相关查询在测试数据库上也是得不到正确结果，本地数据库上仍是可以得到正确结果。现在没有一点头绪，希望能指点一下，谢谢！ <br></div>
+                            <span class="time">2019-01-01 14:23</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/19/bd/9a7658a7.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">shaw</span>
+                            </div>
+                            <div class="bd">老师，案例八中session A已经加了next-key lock (5,10]，也就是(5,10)间隙锁和c=10的行锁，为什么session B的(5,10)间隙锁还能加上？  <br></div>
+                            <span class="time">2019-01-01 12:03</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">你需要查看上一篇😄<br></p>
+                                <p class="reply-time">2019-01-01 14:14</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/09/98/b11c372b.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">鸠翱</span>
+                            </div>
+                            <div class="bd">在案例三中 where id &gt;= 10 and id &lt; 11这里提到了可以使用优化1，退化为id=10的行锁，即&gt;=也可认为包含了等值查询<br>那么在案例五中，where id &gt; 10 and id &lt;=15，根据优化2，(15,20]这个锁，不应该会退化为(15,20)这个间隙锁嘛？难道&lt;=不包含等值查询吗？<br>希望老师能够解惑一下 <br></div>
+                            <span class="time">2019-01-01 11:43</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">除了第一个，后面都是按照范围查询来<br></p>
+                                <p class="reply-time">2019-01-01 14:13</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/f2/63/1f495e51.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">nero</span>
+                            </div>
+                            <div class="bd">请问下案例一为啥没用到优化一：<br>优化 1：索引上的等值查询，给唯一索引加锁的时候，next-key lock 退化为行锁。<br>因为id是主键索引，满足唯一索引，按道理应该走优化一的逻辑，只对id=7这一行加锁 <br></div>
+                            <span class="time">2019-01-01 10:57</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这一行如果存在就是优化一<br><br>但是在我们例子里，这行不存在</p>
+                                <p class="reply-time">2019-01-01 12:04</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/11/18/8cee35f9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">HuaMax</span>
+                            </div>
+                            <div class="bd">首先老师新年快乐，学习专栏受益良多！<br>上期问过老师的问题已了解答案，锁是加在索引上的。再尝试回答问题。c上是普通索引，根据原则2，访问到的都要加锁，在查询c&gt;=15这个条件时，在查找到15后加锁（10，15］，继续往右查找，按理说不会锁住6这个索引值，但查询语句中加了order by c desc，我猜想会优化为使用c&lt;=20这条语句，查找到20后往左查找，这样会访问到15左边的值10，从而加锁（5，10］，不知我理解对否？ <br></div>
+                            <span class="time">2019-01-01 10:20</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">新年好<br><br>对的👍🏿</p>
+                                <p class="reply-time">2019-01-01 12:04</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/e5/39/951f89c8.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">信信</span>
+                            </div>
+                            <div class="bd">老师，图6中的(id=5,c=5)画了两列，重复了。。。。还有感觉那个bug表述有歧义，比如查询条件为&quot;&lt;&quot;的时候，就必须访问到不满足条件的第一个值为止啊，这时候就不是bug啦。。。最后无意中发现个现象，如果session A执行的是select * from t where c &gt;= 10 and c &lt;= 20 lock in share mode;session B甚至无法执行insert(2,2,2)的，自己检查并分析原因是：优化器舍弃回表，选择了遍历主键索引，行锁升级为表锁，请老师指正。 <br></div>
+                            <span class="time">2019-01-01 01:36</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">哦，图6我改下👍🏿<br><br>&lt;这个不是bug的，是规则1；&lt;=和&gt;=我觉得是；<br><br>第三个是好问题。不是表锁，而是因为全索引扫描，所以锁住了索引c上所有next key lock 。<br><br>新年快乐</p>
+                                <p class="reply-time">2019-01-01 08:51</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/07/1e/bdbe93f4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">尘封</span>
+                            </div>
+                            <div class="bd">这么好的专栏，要多推广，让大家都学习学习 <br></div>
+                            <span class="time">2019-01-01 00:21</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">谢谢鼓励哦<br>新年快乐</p>
+                                <p class="reply-time">2019-01-01 00:51</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/f8/ba/14e05601.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">约书亚</span>
+                            </div>
+                            <div class="bd">请问案例八中，session B没有提到在（10，15）上加间隙锁的原因是，在加c=10的行锁时就被阻塞住了，无法执行下一步嘛？ <br></div>
+                            <span class="time">2018-12-31 22:26</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">？<br>特别说明了呀<br>“其实是这样的，session B 的“加 next-key lock(5,10] ”操作，实际上分成了两步，先是加 (5,10) 的间隙锁，加锁成功；然后加 c=10 的行锁，这时候才被锁住的。”<br><br>是不是我理解错你问题了…</p>
+                                <p class="reply-time">2018-12-31 23:32</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/4f/f9/1f0a9665.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">任大鹏</span>
+                            </div>
+                            <div class="bd">2018最后一天，第一次在极客时间留言，读完醍醐灌顶，感谢老师的总结，新年快乐！ <br></div>
+                            <span class="time">2018-12-31 20:52</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">新年快乐🤝</p>
+                                <p class="reply-time">2018-12-31 22:25</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/15/69/fc60d1f4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">陈华应</span>
+                            </div>
+                            <div class="bd">老师，最后思考题，本地运行session b插入成功了，并没有阻塞，想不到是什么原因？有没有和我一样的呢？ <br></div>
+                            <span class="time">2018-12-31 18:39</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/15/69/fc60d1f4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">陈华应</span>
+                            </div>
+                            <div class="bd">老师， insert 是如何加锁的呢？ 是不是只加行锁呢？   我在session a中插入一个不存在的记录，成功，但是事务没提交，然后在session b中重复插入这个记录，会被阻塞。 <br></div>
+                            <span class="time">2018-12-31 17:33</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">对，就是唯一索引加行锁</p>
+                                <p class="reply-time">2018-12-31 20:28</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/36/d2/c7357723.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">发条橙子 。</span>
+                            </div>
+                            <div class="bd">在外面还没看， 不过看到标题就知道是干货满满。 先祝老师元旦快乐 ， 等到家了细细品  <br></div>
+                            <span class="time">2018-12-31 16:08</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">新年好🤝</p>
+                                <p class="reply-time">2018-12-31 20:24</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKlllSKrpQkhc9qLgtu4I4jc2FO9BJAbfgwz7meGCZqlmWsV3GfjqTecqpkTJMYpunxhKHSdc9gpQ/132" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">feixuefubing</span>
+                            </div>
+                            <div class="bd">老师好，请问像排行榜等实时性要求较高的业务，可否为了一致性使用select for update去查当前的数据，重点是，多表join联查（where条件是user表的主键id）的时候是怎样加锁的呢，能否达到预期效果，是否同时会给所有涉及到的表的行加锁？如果联查不可行，对于实时性要求高、需要的数据分布在多个表的查询，有其他更好的实践吗？谢谢老师 <br></div>
+                            <span class="time">2018-12-31 11:36</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">加锁的原则是“查询访问到的要加”<br>For update就是满足条件的行会加上行锁<br><br>排行榜的话还是尽量用可普通查询吧。不太了解你具体需求，说一下一个功能语句？</p>
+                                <p class="reply-time">2018-12-31 16:03</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/03/c7/bd45f0c9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">小白猪</span>
+                            </div>
+                            <div class="bd">看得很舒服 <br></div>
+                            <span class="time">2018-12-31 10:31</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/30/28/6e019a7a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">锅子</span>
+                            </div>
+                            <div class="bd">老师早啊，想不到假期也有更! <br></div>
+                            <span class="time">2018-12-31 10:09</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
